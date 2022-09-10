@@ -5,7 +5,7 @@ Módulo de estatística para Delégua e JavaScript.
 
 <details>
   <summary>
-    <strong>`max()`</strong>
+    <strong>max()</strong>
   </summary><br>
 
   Encontra o elemento máximo em um vetor.
@@ -14,7 +14,7 @@ Módulo de estatística para Delégua e JavaScript.
 
 <details>
   <summary>
-    <strong>`min()`</strong>
+    <strong>min()</strong>
   </summary><br>
 
   Encontra o elemento mínimo em um vetor.
