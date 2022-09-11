@@ -1,5 +1,5 @@
-// import { aprox } from ".";
-// import { somaElementosMatriz } from "./algebra-linear";
+import { aprox } from "@designliquido/delegua-matematica";
+import { somaElementosMatriz } from "@designliquido/delegua-matematica/algebra-linear";
 import { MatematicaErroEmTempoDeExecucao } from "./excecoes";
 
 /**
@@ -82,20 +82,20 @@ export function media(...vetores: Array<Array<number>>) {
 
 /**
  * Calcula a média aritimética de uma matriz.
- * @param {number[]} vetor Um vetor de vetores.
+ * @param {number[] | Array<number[]>} vetor Um vetor de vetores ou um vetor de números.
  * @returns O valor da média aritimética.
  */
-// export function ve(vetor: Array<any>): any {
-//   if (vetor.length == 1) {
-//     return aprox(somaElementosMatriz(vetor) / vetor[0].length, 4);
-//   } // a is a row array
-//   if (vetor[0].length == 1) {
-//     return aprox(somaElementosMatriz(vetor) / vetor.length, 4);
-//   } // a is a column array
-//   if (vetor[0].length == undefined) {
-//     return aprox(somaElementosMatriz(vetor) / vetor.length, 4);
-//   }
-// }
+export function ve(vetor: Array<any>): any {
+  if (vetor.length == 1) {
+    return aprox(somaElementosMatriz(vetor) / vetor[0].length, 4);
+  } // a is a row array
+  if (vetor[0].length == 1) {
+    return aprox(somaElementosMatriz(vetor) / vetor.length, 4);
+  } // a is a column array
+  if (vetor[0] && vetor.length) {
+    return aprox(somaElementosMatriz(vetor) / vetor.length, 4);
+  }
+}
 
 /**
  * Calcula a covariância de duas matrizes
@@ -103,15 +103,15 @@ export function media(...vetores: Array<Array<number>>) {
  * @param {numero[]} array2 Um vetor de números.
  * @returns O valor da coariância das duas matrizes.
  */
-// export function covar(array1: Array<any>, array2: Array<any>): any {
-//   var u = ve(array1);
-//   var v = ve(array2);
-//   var arr1Len = array1.length;
-//   var sq_dev = new Array(arr1Len);
-//   for (var i = 0; i < arr1Len; i++)
-//     sq_dev[i] = (array1[i] - u) * (array2[i] - v);
-//   return somaElementosMatriz(sq_dev) / (arr1Len - 1);
-// }
+export function covar(array1: Array<any>, array2: Array<any>): any {
+  var u = ve(array1);
+  var v = ve(array2);
+  var arr1Len = array1.length;
+  var sq_dev = new Array(arr1Len);
+  for (var i = 0; i < arr1Len; i++)
+    sq_dev[i] = (array1[i] - u) * (array2[i] - v);
+  return somaElementosMatriz(sq_dev) / (arr1Len - 1);
+}
 
 /**
  * Calcula a mediana de um vetor ou matriz.
