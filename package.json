@@ -1,7 +1,7 @@
 {
   "name": "@designliquido/delegua-estatistica",
   "version": "0.0.2",
-  "description": "Biblioteca de manejo de operações de física em português, para JavaScript e Delégua",
+  "description": "Biblioteca de manejo de operações de estatística em português, para JavaScript e Delégua",
   "scripts": {
     "empacotar": "rm -Rf ./dist && tsc && copyfiles -V ./README.md ./dist",
     "publicar-npm": "npm publish --access public",
