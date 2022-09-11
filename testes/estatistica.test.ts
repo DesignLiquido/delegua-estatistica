@@ -1,4 +1,5 @@
-import { max, media, mediana, min, moda } from "../estatistica";
+import { covar, max, media, mediana, min, moda, ve } from "../estatistica";
+import { MatematicaErroEmTempoDeExecucao } from "../excecoes";
 // import { covar, max, media, mediana, min, moda } from "../estatistica";
 
 describe('max', () => {
@@ -63,25 +64,52 @@ describe('moda', () => {
 })
 
 describe("media", () => {
-//   it('atira exceção se num for nulo', () => {
-//     expect(media([null, 1, null])).toEqual([NaN]);
-//   })
+  it('atira exceção se vetor tiver valores nulos', () => {
+    expect(() => media([null, 1, null])).toThrow(MatematicaErroEmTempoDeExecucao);
+  })
 
-//   it('retorna NaN se array for vazio', () => {
-//     expect(media([])).toEqual([]);
-//   })
+  it('atira exceção se array for vazio', () => {
+    expect(() => media([])).toThrow(MatematicaErroEmTempoDeExecucao);
+  })
+
+  it('atira exceção se nenhum parametro for passado', () => {
+    expect(() => media()).toThrow(MatematicaErroEmTempoDeExecucao);
+  })
+
+  it('atira exceção se mais de um parametro for passado', () => {
+    expect(() => media([], [], [], [], [])).toThrow(MatematicaErroEmTempoDeExecucao);
+    expect(() => media(1, 2, 3, 4, 5)).toThrow(MatematicaErroEmTempoDeExecucao);
+  })
+
+  it('atira exceção se o parametro passado não for um vetor', () => {
+    expect(() => media(1)).toThrow(MatematicaErroEmTempoDeExecucao);
+  })
 
   it('retorna a media', () => {
     expect(media([1, 2, 3, 4, 5])).toEqual(3);
   })
 })
 
-// describe('covar', () => {
-//   it('retorna a covariância entre as matrizes', () => {
-//     expect(covar([1, 2, 3, 4, 5], [1, 2, 3, 4, 5])).toEqual(2.5)
-//   })
+describe('covar', () => {
+  it('retorna a covariância entre as matrizes', () => {
+    expect(covar([1, 2, 3, 4, 5], [1, 2, 3, 4, 5])).toEqual(2.5)
+  })
 
-//   it('retorna ? se algum dos parametros não for passado', () => {
-//     expect(covar([1, 2, null, null, 4, 5], [1, 2, 3, 4, 5])).toEqual(NaN);
-//   })
-// })
+  it('retorna ? se algum dos parametros não for passado', () => {
+    expect(covar([1, 2, null, null, 4, 5], [1, 2, 3, 4, 5])).toEqual(NaN);
+  })
+})
+
+describe('ve', () => {
+  it('retorna o valor da média aritimética de uma matriz', () => {
+    expect(ve([1, 2, 3, 4, 5])).toEqual("3.0000");
+  })
+
+  it('retorna o NaN se o vetor contem apenas um numero', () => {
+    expect(ve([1])).toEqual("NaN");
+  })
+  
+  it('retorna o valor da média aritimética de uma matriz de um numero', () => {
+    expect(ve([[1], [2], [3], [4], [5]])).toEqual("3.0000");
+  })
+})
