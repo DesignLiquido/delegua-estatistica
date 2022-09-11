@@ -28,6 +28,9 @@
     }
   ],
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "devDependencies": {
     "@babel/preset-env": "^7.16.8",
     "@babel/preset-typescript": "^7.16.7",

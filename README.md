@@ -1,49 +1,29 @@
-# delegua-estatistica
-Módulo de estatística para Delégua e JavaScript.
+# Módulo de estatística para Delégua e JavaScript
 
-# ESTATÍSTICA
+Assim como Delégua é uma variação da linguagem Égua, esta biblioteca é uma variação da biblioteca Eguamat.
 
-<details>
-  <summary>
-    <strong>max()</strong>
-  </summary><br>
+No entanto, diferente de Eguamat, que faz parte do código da linguagem Égua, essa biblioteca é distribuída independentemente da linguagem Delégua. Isso possibilita importar a biblioteca tanto para Delégua quanto para JavaScript. Basta para isso instalar a biblioteca usando o NPM. 
 
-  Encontra o elemento máximo em um vetor.
+Além disso, Delégua deve ter uma automação para instalar o pacote quando for importado.
 
-</details>
+# Funções estatísticas
 
-<details>
-  <summary>
-    <strong>min()</strong>
-  </summary><br>
-
-  Encontra o elemento mínimo em um vetor.
-
-</details>
-
-<details>
-  <summary>
-    <strong>media()</strong>
-  </summary><br>
+## `max()`
   
-  Calcula a média dos elementos da lista.
+Encontra o elemento máximo em um vetor.
 
-</details>
+## `min()`
 
-<details>
-  <summary>
-    <strong>mediana()</strong>
-  </summary><br>
+Encontra o elemento mínimo em um vetor.
+
+## `media()`
   
-  Calcula a mediana de um vetor ou matriz.
+Calcula a média dos elementos da lista.
 
-</details>
-
-<details>
-  <summary>
-    <strong>moda()</strong>
-  </summary><br>
+## `mediana()`
   
-  Calcula a moda de um vetor. A moda é o valor, ou valores, que mais são presentes em um conjunto.
+Calcula a mediana de um vetor ou matriz.
 
-</details>
+## `moda()`
+  
+Calcula a moda de um vetor. A moda é o valor, ou valores, que são mais presentes em um conjunto.
