@@ -5,8 +5,7 @@
   "scripts": {
     "empacotar": "rm -Rf ./dist && tsc && copyfiles -V ./README.md ./dist",
     "publicar-npm": "npm publish --access public",
-    "testes-unitarios": "jest --coverage",
-    "release": "release-it"
+    "testes-unitarios": "jest --coverage"
   },
   "keywords": [
     "delegua",
