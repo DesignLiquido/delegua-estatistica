@@ -3,7 +3,7 @@
   "version": "0.0.5",
   "description": "Biblioteca de manejo de operações de estatística em português, para JavaScript e Delégua",
   "scripts": {
-    "empacotar": "rm -Rf ./dist && tsc && yarn copyfiles -V ./README.md ./dist",
+    "empacotar": "yarn rimraf ./dist && tsc && yarn copyfiles -V ./README.md ./dist",
     "publicar-npm": "npm publish --access public",
     "testes-unitarios": "jest --coverage"
   },

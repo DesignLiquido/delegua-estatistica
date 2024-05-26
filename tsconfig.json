@@ -9,6 +9,11 @@
     "declaration": true,
     "esModuleInterop": true
   },
-  "exclude": ["babel.config.js", "dist/**/*", "jest.config.ts"],
+  "exclude": [
+    "babel.config.js", 
+    "dist/**/*", 
+    "jest.config.ts",
+    "testes/**/*"
+  ],
   "lib": ["es2017", "dom"]
 }
