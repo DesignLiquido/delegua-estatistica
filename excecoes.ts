@@ -1,4 +1,4 @@
-export class MatematicaErroEmTempoDeExecucao extends Error {
+export class EstatisticaErroEmTempoDeExecucao extends Error {
   simbolo: any;
   mensagem: string;
 
@@ -6,6 +6,6 @@ export class MatematicaErroEmTempoDeExecucao extends Error {
     super(mensagem);
     this.simbolo = simbolo;
     this.mensagem = mensagem;
-    Object.setPrototypeOf(this, MatematicaErroEmTempoDeExecucao.prototype);
+    Object.setPrototypeOf(this, EstatisticaErroEmTempoDeExecucao.prototype);
   }
 }
